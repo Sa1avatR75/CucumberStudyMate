@@ -20,4 +20,9 @@ public class Driver {
 
         return driver;
     }
+
+    public static void close( ) {
+        driver.close();
+        driver=null;
+    }
 }
