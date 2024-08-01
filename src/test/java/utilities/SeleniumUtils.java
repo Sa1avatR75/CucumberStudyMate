@@ -13,4 +13,11 @@ public class SeleniumUtils {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    public static void waitForSeconds(int numberOfSeconds){
+        try{
+            Thread.sleep(numberOfSeconds * 1000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
 }
